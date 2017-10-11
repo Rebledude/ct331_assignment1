@@ -16,10 +16,33 @@ void runTests(){
   traverse(l);
   printf("\n");
 
-  // Test delete after
+  // Test delete after and print
   deleteAfter(l);
   traverse(l);
   printf("\n");
 
+  //Test length
+  printf("Number of Elements: %d\n", length(l));
+
+  //Test Pushing to list and print
+  push(&l, "new string (4)", 30);
+  traverse(l);
+  printf("\n");
+
+  //Test Pop and print
+  pop(&l);
+  traverse(l);
+  printf("\n");
+
+  //Test Enqueue
+  enqueue(&l, "newer string (5)", 30);
+  traverse(l);
+  printf("\n");
+
+  //Test Dequeue
+  dequeue(&l);
+  traverse(l);
+  printf("\n");
+  
   printf("\nTests complete.\n");
 }
