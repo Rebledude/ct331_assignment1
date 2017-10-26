@@ -76,14 +76,22 @@ void push(listElement** list, char* data, size_t size) {
 	*list = start;
 }
 
-listElement* pop(listElement** list) {	listElement* temp = *list;	if (list != NULL) {
+listElement* pop(listElement** list) {
+	listElement* temp = *list;
+	if (list != NULL) {
 		*list = temp->next;
 		temp->next = NULL;
 	} 
-	return temp;}void enqueue(listElement** list, char* data, size_t size) {
+	return temp;
+	}
+	
+void enqueue(listElement** list, char* data, size_t size) {
 	listElement* start = createEl(data, size);
 	start->next = *list;
-	*list = start;}listElement* dequeue(listElement** list) {
+	*list = start;
+	}
+	
+listElement* dequeue(listElement** list) {
 
 	listElement* end = *list;
 	listElement* newEnd = NULL;
